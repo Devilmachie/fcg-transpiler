@@ -34,6 +34,9 @@ $(EXEC):$(OBJ)
 
 .PHONY: test
 test: out/$(EXEC_TEST)
+
+runtest : test
+	@./out/$(EXEC_TEST) -s -d yes
 	
 
 out/$(EXEC_TEST): $(OBJ_TEST)
