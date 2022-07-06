@@ -15,10 +15,10 @@ EXEC_TEST     := testunits
 FLAGS_TEST    := $(FLAGS)
 CXXFLAGS_TEST := $(CXXFLAGS)
 LDFLAGS_TEST  := $(LDFLAGS)
-INC_TEST      := $(INC) -I testunits/include
+INC_TEST      := $(INC) -I testunits/include -I /usr/include
 SRC_TEST      := $(wildcard testunits/*.cpp)
 OBJ_TEST      := $(filter-out tmp/main.o, $(OBJ)) $(SRC_TEST:tst/%.cpp=tmp/%.o)
-LIBS_TEST     := $(LIBS) -lcunit
+LIBS_TEST     := $(LIBS) 
 .SUFFIXES:
 
 # --------------------------------------------------------------
